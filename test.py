@@ -7,8 +7,10 @@ rawdocs = ('eat turkey on turkey day holiday',
             'movie at air and space museum is cool movie',
             'aspiring movie star')
 
+word_id = None
 
 def assign_id(warray):
+    global word_id
     wordlist=[]
     count = 0
     wordlist.append(warray[0])
@@ -22,8 +24,8 @@ def assign_id(warray):
 
     temp = ((i, wordlist[i]) for i in range(0, len(wordlist)))
 
-    word_id = dict(temp)
-    word_id = {v: k for k, v in word_id.iteritems()}
+    word_id=dict(temp)
+    word_id={v: k for k, v in word_id.iteritems()}
 
 
     for i in range(0, len(warray)):
@@ -38,18 +40,18 @@ for i in range(0, len(rawdocs)):
     for j in range(0, len(attach)):
         docs.append(attach[j])
 
+assign_id(docs)
+
 wordfreq = []
 for w in docs:
     wordfreq.append(docs.count(w))
 
-K = 2
-alpha = 1
-eta = .001
-iterations = 3
 
-print docs
+#print docs
 print
-#print wordfreq
-assign_id(docs)
+print wordfreq
 
-print docs
+word_id={v: k for k, v in word_id.iteritems()}
+
+for i in range(0,len(word_id)):
+    print str(word_id[i]) + '   ' + str(wordfreq[i])
