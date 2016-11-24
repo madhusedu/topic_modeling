@@ -22,5 +22,4 @@ alpha = 1
 eta = .001
 iterations = 3
 
-#print docs
 print wordfreq
