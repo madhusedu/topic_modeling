@@ -13,11 +13,14 @@ for i in range(0, len(rawdocs)):
     for j in range(0, len(attach)):
         docs.append(attach[j])
 
-
+wordfreq = []
+for w in docs:
+    wordfreq.append(docs.count(w))
 
 K = 2
 alpha = 1
 eta = .001
 iterations = 3
 
-print docs
+#print docs
+print wordfreq
