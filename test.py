@@ -8,17 +8,23 @@ rawdocs = ('eat turkey on turkey day holiday',
             'aspiring movie star')
 
 def assign_id(warray):
-    word_id =[]
+    wordlist=[]
+    count = 0
 
     for i in range(0,len(warray)):
         flag = 0
-        for j in range(0, len(word_id)):
-            if warray[i] == word_id[j]:
+        for j in range(0, len(wordlist)):
+            if warray[i] == wordlist[j]:
                 flag+=1
         if flag == 0:
-            word_id.append(warray[i])
+            wordlist.append(warray[i])
 
-    print word_id
+    temp = ((i, wordlist[i]) for i in range(1, len(wordlist)))
+
+    print dict(temp)
+    print wordlist
+
+
 
 docs = []
 for i in range(0, len(rawdocs)):
