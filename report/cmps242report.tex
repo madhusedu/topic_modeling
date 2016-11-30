@@ -149,9 +149,7 @@ After drawing the new topic we update the topic assignment list with newly sampl
 
 After we complete learning the topics for \textit{r} iterations iterations, we use the count matrices to obtain the word-topic distribution and document-topic distribution.
 
-LDA assumes that each document is a mixture of all topics, thus after computing the probability that each document belongs to each topic we use this information to see which topic each of the documents belong to and possible words that are associated with each topic.
-
-After understanding the computations we attempted to tune the parameters.
+It is assumed that each document is a mixture of all topics, thus after computing the probability that each document belongs to each topic, we use this information to see which topic each of the documents belong to and possible words that are associated with each topic. After forming an opinion on the topic-document correlation, we attempted to tune the parameters.
 
 Since the starting point sampling point of dataset is chosen randomly, thus it makes sense to discard the first few iterations. Due to the fact that they most likely do not reflect the properties of distribution accurately. And another parameter is  the number of iterations omitted during the training. This prevents the correlation between samples while iterating.
 
@@ -159,7 +157,7 @@ Since the starting point sampling point of dataset is chosen randomly, thus it m
 \section{Feature Engineering} 
 	\label{engineer} 
 
-	In order to perform the function of topic modeling we needed a dataset for which we used the review's dataset which was provided in the Yelp dataset. The dataset was found to be large in order to process and obtain results quickly. Due to time constraints it had to be sub-sampled to about 500 reviews. This gave the satisfaction that our results was obtained efficiently on a large enough dataset required to generalize our algorithm.
+	In order to perform the function of topic modeling we needed a dataset, for this we used the Yelp user review's dataset which was provided along with the other datasets in the Yelp dataset. The dataset was found to be very large in order to process and obtain results quickly. Due to this time constraint ,we had to be sub-sample the dataset and form a secondary dataset with about 500 reviews. This ensured that our results was obtained efficiently on a large enough dataset required to generalize our algorithm.
 	
 	The primary feature that was required to perform the desired task was review text. Not much else was needed apart from this. Using. the review text we created other parameters which we then used to create a topic model. Some of these were 
 	
@@ -169,7 +167,7 @@ Since the starting point sampling point of dataset is chosen randomly, thus it m
 		\item{The various probabilities of occurrences}
 	\end{itemize} 
 
-	However we could not use the review text as obtained in the dataset. We had to process the extracted data so that the necessary functions could be applied to it in order to obtain the results. 
+	However we could not use the review text as given within the dataset. We had to process the data so that the necessary functions could be applied to it in order to obtain the results. 
 	
 	In order to obtain and process the data we first had to convert the JSON file into a useable CSV file. Once this was done we sub-sampled the dataset into something that was smaller and would give us a flavor of what we could expect from a larger dataset. 
 	
@@ -177,7 +175,7 @@ Since the starting point sampling point of dataset is chosen randomly, thus it m
 	
 	After removing the stop words we went ahead and labelled the sentences i.e. we implemented topic modeling using the 	LDA algorithm and then classified each subtopic into groups such as Price, Time of the day, Service, etc...
 	  
-	 We created specific methods within our code to implement the tasks. 
+	 We created specific methods within our code to implement the tasks which are explained in sections ~\ref{eval} and ~\ref{result}. 
 	
 \section{Evaluation} 
 	\label{eval} 
