@@ -59,9 +59,9 @@ During holidays such as Thanksgiving the use of these services increase dramatic
 
 The general method used to increase the reliability of a product/business/service is by collecting ratings reviews from the people who have used them. This facilitates future customers to form a better opinion of the product when deciding to whether or not use the product.  
 
-After a thorough observation of ratings and reviews provided on websites such as IMDb, Yelp, Amazon the following was observed. The overall rating for any product is formed as a weighted average of the ratings provided by all the users. This method completely disregards the review text provided by many of the users.  The users generally provide important information which can be used to improve the overall rating of the product. For an example of this situation, we can consider reviews provided for a restaurant. An user may provide a rating of 3 stars for the restaurant and then provide a review which makes the restaurant actually worth 3.5 or maybe even 4 stars. 
+After a thorough observation of ratings and reviews provided on websites such as IMDb, Yelp, Amazon we observed that The overall rating for any product is formed as a weighted average of the ratings provided by all the users. This method completely disregards the review text provided by many of the users.  The users generally provide important information which can be used to improve the overall rating of the product. For an example of this situation, we can consider reviews provided for a restaurant. An user may provide a rating of 3 stars for the restaurant and then provide a review which makes the restaurant actually worth 2.5 or maybe even 4 stars. 
 
-This problem that is presented above provided us with the opportunity to develop a system which uses Latent Dirichlet Allocation and Topic Modeling techniques in order to understand the reviews provided by the user. After doing so we attempt to develop an application which fine tunes the overall quality of ratings for any given product/business. 
+This problem that is presented above provided us with the opportunity to develop a topic modeled system which uses Latent Dirichlet Allocation technique in order to understand the reviews provided by the user. After doing so we attempt to develop an application which fine tunes the overall quality of ratings for any given product/business. 
 
 
 \begin{figure}[ht]
@@ -96,17 +96,18 @@ This problem that is presented above provided us with the opportunity to develop
 \section{Algorithm Formulation} 
 	\label{algorithm} 
 
-	In order to perform all the operations we first started off by extracting the required text from the review data file. After this 		the extracted review text were processed into a format which can then be use within the code and identification numbers 		were assigned to every unique words. This list of unique words had to exclude words such as "a", "the" and so on. This 		was done to avoid wrong analyses of the extracted review text. 
+	In order to perform all the operations we first started off by extracting the required text from the review data file. After this, 		the extracted review text were processed into a format which can then be use within the code and identification numbers 		were assigned to every unique words. This list of unique words had to exclude words such as "a", "the" and so on. This 		was done to avoid wrong analyses of the extracted review text. 
 	
 	For our algorithm we decided to specify the number of topics that we would be using to group the set of documents into 		upfront ( denoted by K ). For our cases we defined 2 as the number of topics.
 
 	For the first part of algorithm we randomly assigned words to one the 2 topics that we have initialized. Along with			generating this topic assignment list, we created two matrices which are :
+	
 	\begin{itemize}
 	 	\item \textbf{Word-topic matrix :} in other words we created a count of the words being assigned to each of the 2 				topics. 
 		\item \textbf{Document-topic matrix :} This is the matrix with the distribution of the topic assignment list.
 	\end{itemize}
 	
-	In every document \textit{d}, we observe every word \textit{w}.  We then chose a topic \textit{t} with the \textit{p(w | t)} $		\times$ \textit{p(t | d)}, denoted by the following mathematical notations:
+	In every document \textit{d}, we observe every word \textit{w}.  We then chose a topic \textit{t} with the probability equal to 	\textit{p(w | t)} $	\times$ \textit{p(t | d)}, denoted by the following mathematical notations:
 	
 \twocolumn[
 \vskip 0.3 in
@@ -144,9 +145,7 @@ $W$ : Total number of words in the set of documents.
 $T$ : Number of topics.
 
 
-After drawing the new topic we update the topic assignment list with newly sampled topic for the word \textit{w}
-
-After that increment the word-topic and document-topic count matrices with the new sampled topic for word \textit{w}.
+After drawing the new topic we update the topic assignment list with newly sampled topic for the word \textit{w} following which the word-topic and document-topic count matrices are incremented with the new sampled topic for word \textit{w}.
 
 After we complete learning the topics for \textit{r} iterations iterations, we use the count matrices to obtain the word-topic distribution and document-topic distribution.
 
