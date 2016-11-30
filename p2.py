@@ -1,13 +1,10 @@
 from nltk.tokenize import RegexpTokenizer
 from stop_words import get_stop_words
 from nltk.stem.porter import PorterStemmer
-#from gensim import corpora, models
-#import gensim
 import pandas
 import random
 from itertools import chain
 import numpy
-#from nltk.stem.snowball import SnowballStemmer
 
 def denom_a_func(d):
     denom_a_sum1= 0
@@ -53,10 +50,10 @@ reviews = fileread.c.tolist()
 review =  [i.decode('UTF-8') if isinstance(i, basestring) else i for i in reviews]
 tokenizer = RegexpTokenizer(r'\w+')
 
-#we are using the stop_words to implement this method
+#stop_words used for implementation
 int_stop = get_stop_words('en')
 
-#we are using porterstemmer to implement this method
+#porterstemmer used for implementation
 p_stemmer = PorterStemmer()
 #stemmer2 = SnowballStemmer("english", ignore_stopwords=True)
 

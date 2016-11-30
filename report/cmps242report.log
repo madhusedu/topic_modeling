@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 NOV 2016 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 NOV 2016 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -277,9 +277,25 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 98.
 \cv@tmpc@=\count113
 \cv@tmpc=\count114
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
 (./cmps242report.aux
 
-./cmps242report.aux:38: Package natbib Error: Bibliography not compatible with 
+LaTeX Warning: Label `thanksgiving' multiply defined.
+
+
+LaTeX Warning: Label `thanksgiving' multiply defined.
+
+
+LaTeX Warning: Label `thanksgiving' multiply defined.
+
+
+./cmps242report.aux:42: Package natbib Error: Bibliography not compatible with 
 author-year citations.
 (natbib)                Press <return> to continue in numerical citation style.
 
@@ -288,29 +304,29 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.38 ...mand\NAT@force@numbers{}\NAT@force@numbers
+l.42 ...mand\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? 
 )
 \openout1 = `cmps242report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 15.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 16.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -341,7 +357,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring ON on input line 15.
+Package hyperref Info: Link coloring ON on input line 16.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -351,9 +367,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count121
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
 
 (./cmps242report.out) (./cmps242report.out)
 \@outlinefile=\write3
@@ -362,61 +378,61 @@ LaTeX Info: Redefining \nameref on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 31.
+(hyperref)                removing `\\' on input line 32.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 31.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 32.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 32.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `OT1/pcr/bx/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/it' tried instead on input line 31.
-LaTeX Font Info:    Font shape `OT1/pcr/b/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/sl' tried instead on input line 31.
+LaTeX Font Info:    Font shape `T1/pcr/bx/it' in size <10> not available
+(Font)              Font shape `T1/pcr/b/it' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/pcr/b/it' in size <10> not available
+(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 33.
+(Font)              <9> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 33.
+(Font)              <6> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 33.
+(Font)              <5> on input line 34.
 
-Overfull \hbox (5.1225pt too wide) in paragraph at lines 33--33
+Overfull \hbox (5.1225pt too wide) in paragraph at lines 34--34
  [] 
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 55.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 34.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 56.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
 
 <eCommerce_chart.pdf, id=7, 794.97pt x 614.295pt>
 File: eCommerce_chart.pdf Graphic file (type pdf)
  <use eCommerce_chart.pdf>
-Package pdftex.def Info: eCommerce_chart.pdf used on input line 75.
+Package pdftex.def Info: eCommerce_chart.pdf used on input line 76.
 (pdftex.def)             Requested size: 234.8775pt x 181.49664pt.
 
 <yelp_stats.pdf, id=8, 794.97pt x 614.295pt>
 File: yelp_stats.pdf Graphic file (type pdf)
  <use yelp_stats.pdf>
-Package pdftex.def Info: yelp_stats.pdf used on input line 85.
+Package pdftex.def Info: yelp_stats.pdf used on input line 86.
 (pdftex.def)             Requested size: 234.8775pt x 181.49664pt.
 
 <Thanksgiving_sales.pdf, id=9, 794.97pt x 614.295pt>
 File: Thanksgiving_sales.pdf Graphic file (type pdf)
 
 <use Thanksgiving_sales.pdf>
-Package pdftex.def Info: Thanksgiving_sales.pdf used on input line 94.
+Package pdftex.def Info: Thanksgiving_sales.pdf used on input line 95.
 (pdftex.def)             Requested size: 234.8775pt x 181.49664pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -426,64 +442,118 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-./cmps242report.tex:142: Misplaced alignment tab character &.
-l.142 	JMLR : W&
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 115.
+ [2 <./eCommerce_chart.pdf, page is rotated 90 degrees> <./yelp_stats.pdf, page
+ is rotated 90 degrees> <./Thanksgiving_sales.pdf, page is rotated 90 degrees>]
+
+./cmps242report.tex:125: Undefined control sequence.
+<argument> ...kip 0.3 in \par $$ p( z_i = j \text 
+                                                  { }| \text { } z_{-i}, w_i...
+l.125 ]
+       
+? 
+./cmps242report.tex:125: Undefined control sequence.
+<argument> ...\par $$ p( z_i = j \text { }| \text 
+                                                  { } z_{-i}, w_i, d_i ) = \...
+l.125 ]
+       
+? 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 1902) has occurred while \output is active []
+
+ [3
+
+]
+<preproctext.png, id=77, 454.69875pt x 238.8925pt>
+File: preproctext.png Graphic file (type png)
+ <use preproctext.png>
+Package pdftex.def Info: preproctext.png used on input line 198.
+(pdftex.def)             Requested size: 234.8775pt x 123.40099pt.
+
+<tokenized.png, id=79, 542.025pt x 336.25626pt>
+File: tokenized.png Graphic file (type png)
+ <use tokenized.png>
+Package pdftex.def Info: tokenized.png used on input line 205.
+(pdftex.def)             Requested size: 234.8775pt x 145.71103pt.
+
+<lda.png, id=80, 684.5575pt x 347.2975pt>
+File: lda.png Graphic file (type png)
+ <use lda.png>
+Package pdftex.def Info: lda.png used on input line 212.
+(pdftex.def)             Requested size: 234.8775pt x 119.16064pt.
+
+./cmps242report.tex:264: Misplaced alignment tab character &.
+l.264 	JMLR : W&
                 CP volume 28. Copyright 2013 by the author
 ? 
-./cmps242report.tex:151: Misplaced alignment tab character &.
-l.151 ...D. M., Griffiths, T. L., Jordan, M. I., &
+[4 <./preproctext.png> <./tokenized.png> <./lda.png>]
+./cmps242report.tex:273: Misplaced alignment tab character &.
+l.273 ...D. M., Griffiths, T. L., Jordan, M. I., &
                                                    Tenenbaum, J. B.
 ? 
-[2 <./eCommerce_chart.pdf, page is rotated 90 degrees> <./yelp_stats.pdf, page 
-is rotated 90 degrees> <./Thanksgiving_sales.pdf, page is rotated 90 degrees>]
 
-./cmps242report.tex:182: LaTeX Error: \begin{thebibliography} on input line 127
+./cmps242report.tex:304: LaTeX Error: \begin{thebibliography} on input line 252
  ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.182 \end{document}
+l.304 \end{document}
                     
 ? 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
-[3
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 304.
+[5
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 304.
  (./cmps242report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 304.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 304.
 Package rerunfilecheck Info: File `cmps242report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 304.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 127 (\begingroup)
+### semi simple group (level 1) entered at line 252 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6333 strings out of 493014
- 91979 string characters out of 6133351
- 184007 words of memory out of 5000000
- 9769 multiletter control sequences out of 15000+600000
- 22907 words of font info for 46 fonts, out of 8000000 for 9000
+ 6544 strings out of 493014
+ 93628 string characters out of 6133351
+ 184404 words of memory out of 5000000
+ 9964 multiletter control sequences out of 15000+600000
+ 41840 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,11n,45p,692b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,11n,45p,692b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrbo8a.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on cmps242report.pdf (3 pages, 550267 bytes).
+}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/urw/courier/ucrbo8a.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on cmps242report.pdf (5 pages, 699284 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 24 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
