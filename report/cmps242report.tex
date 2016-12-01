@@ -52,14 +52,14 @@
 		to hoodwink the customer into buying the product/using the service making them very reliable}
 		\item{\textbf{Ease of use :} All these services have a clean web/app interface which makes it very convenient for the 
 		people to use them. }
-\end{itemize}
-The effect of the above factors can be seen in the growth of the industries, as indicated in Figure. ~\ref{sales} and Figure ~\ref{yelp}.
+	\end{itemize}
+	The effect of the above factors can be seen in the growth of the industries, as indicated in Figure. ~\ref{sales} and Figure 		~\ref{yelp}.
 
-During holidays such as Thanksgiving the use of these services increase dramatically. The usage statistics is indicated in Figure ~\ref{thanksgiving}.
 
-The general method used to increase the reliability of a product/business/service is by collecting ratings reviews from the people who have used them. This facilitates future customers to form a better opinion of the product when deciding to whether or not use the product.  
 
-After a thorough observation of ratings and reviews provided on websites such as IMDb, Yelp, Amazon we observed that The overall rating for any product is formed as a weighted average of the ratings provided by all the users. This method completely disregards the review text provided by many of the users.  The users generally provide important information which can be used to improve the overall rating of the product. For an example of this situation, we can consider reviews provided for a restaurant. An user may provide a rating of 3 stars for the restaurant and then provide a review which makes the restaurant actually worth 2.5 or maybe even 4 stars. 
+	The general method used to increase the reliability of a product/business/service is by collecting ratings reviews from the people who have used them. This facilitates future customers to form a better opinion of the product when deciding to whether or not use the product.  
+	
+	After a thorough observation of ratings and reviews provided on websites such as IMDb, Yelp, Amazon we observed that The overall rating for any product is formed as a weighted average of the ratings provided by all the users. This method completely disregards the review text provided by many of the users.  The users generally provide important information which can be used to improve the overall rating of the product. For an example of this situation, we can consider reviews provided for a restaurant. An user may provide a rating of 3 stars for the restaurant and then provide a review which makes the restaurant actually worth 2.5 or maybe even 4 stars. 
 
 This problem that is presented above provided us with the opportunity to develop a topic modeled system which uses Latent Dirichlet Allocation technique in order to understand the reviews provided by the user. After doing so we attempt to develop an application which fine tunes the overall quality of ratings for any given product/business. 
 
@@ -85,14 +85,6 @@ This problem that is presented above provided us with the opportunity to develop
 \end{figure} 
 
 
-\begin{figure}[ht]
-	\centerline{\includegraphics[width=\columnwidth]{Thanksgiving_sales}}
-	\caption{eCommerce sales during the Thanksgiving week.}
-	\label{thanksgiving}
-	\vskip 0.15in
-\end{figure} 
-
-
 \section{Algorithm Formulation} 
 	\label{algorithm} 
 
@@ -100,11 +92,32 @@ This problem that is presented above provided us with the opportunity to develop
 	
 	For our algorithm we decided to specify the number of topics that we would be using to group the set of documents into 		upfront ( denoted by K ). For our cases we defined 2 as the number of topics.
 
-	For the first part of algorithm we randomly assigned words to one the 2 topics that we have initialized. Along with			generating this topic assignment list, we created two matrices which are :
+	How are we going to implement the idea?
+	
+	The Yelp Data Set consists of many categories of user reviews based on Business, Review, User, Check-in and Tip. In our 	project, we mainly focus on the ?Review dataset? which consists of user reviews. We also used ?Business dataset? to 		select only restaurant reviews to avoid training the model on unnecessary data. In a broad sense we perform the following:	
 	
 	\begin{itemize}
-	 	\item \textbf{Word-topic matrix :} in other words we created a count of the words being assigned to each of the 2 				topics. 
-		\item \textbf{Document-topic matrix :} This is the matrix with the distribution of the topic assignment list.
+	 	\item \textbf{Preprocessing reviews by:} 
+			� Converting all reviews to lower case\\
+			� Tokenizing the reviews\\
+			� Removing StopWords\\
+			� Stemming the words to its root\\
+		
+		\item {Sentence Labelling wherein we implement topic modelling using the LDA algorithm and then classifying each subtopic into groups such as ?Price? ?Time of the day? ?Food? ?Service? etc... Sentiment Analysis by using Bag-of- words to detect frequently occurring words, and grouping them in sentimental zones and granting each category a sentimental score.}
+		
+		\item { Category Rating Prediction by combining the two implementations mentioned above after which we are able to successfully generate an average rating for every category.}
+
+	\end{itemize}
+	
+	For the first part of algorithm we randomly assigned words to one the 2 topics that we have initialized. Along with 			generating this topic assignment list, we created two matrices which are :
+	
+	\begin{itemize}
+	
+		\item { \textbf{Word-topic matrix :} in other words we created a count of the words being assigned to each of the 2 topics.
+		\item { \textbf{Document-topic matrix :} This is the matrix with the distribution of the topic assignment list.
+}
+}
+	
 	\end{itemize}
 	
 	In every document \textit{d}, we observe every word \textit{w}.  We then chose a topic \textit{t} with the probability equal to 	\textit{p(w | t)} $	\times$ \textit{p(t | d)}, denoted by the following mathematical notations:
@@ -112,10 +125,19 @@ This problem that is presented above provided us with the opportunity to develop
 \twocolumn[
 \vskip 0.3 in
 
-$$ p( z_i = j \text{ }| \text{ } z_{-i}, w_i, d_i ) = \frac{ C^{WT}{w_ij} + \eta }{ \sum^W{ w = 1 }C^{WT}{wj} + W\eta }\times 			\frac{ C^{DT}{d_ij} + \alpha }{ \sum^T_{ t = 1 }C^{DT}_{d_it} + T\alpha } $$
+$$ p( z_i = j \text{ }| \text{ } z_{-i}, w_i, d_i ) = \frac{ C^{WT}_{w_ij} + \beta }{ \sum^W{ w = 1 }C^{WT}_{wj} + W\beta }\times 			\frac{ C^{DT}_{d_ij} + \alpha }{ \sum^T_{ t = 1 }C^{DT}_{d_it} + T\alpha } $$
 
 
 \vskip 0.3 in
+
+
+$$  \theta^{j}{i} = \frac{ C^{WT}{ij} + \beta }{ \sum^K_{ K = 1 }C^{WT}_{Kj} + W\beta }
+
+\vskip 0.3in
+
+$$ \phi^{j}{d} = \frac{ C^{DT}{dk} + \alpha }{ \sum^T_{ t = 1 }C^{DT}_{dk} + T\alpha }
+
+\vskip 0.3in
 
 ]
 where, 
@@ -143,7 +165,6 @@ $\alpha$ : Parameter to set the topic distribution for the documents.
 $W$ : Total number of words in the set of documents.
 
 $T$ : Number of topics.
-
 
 After drawing the new topic we update the topic assignment list with newly sampled topic for the word \textit{w} following which the word-topic and document-topic count matrices are incremented with the new sampled topic for word \textit{w}.
 
@@ -179,33 +200,39 @@ Since the starting point sampling point of dataset is chosen randomly, thus it m
 	
 \section{Evaluation} 
 	\label{eval} 
+	
+	We compare our LDA model that was constructed from scratch with the LDA model obtained using genism. It was observed that, given all the parameters were the same, the perplexity calculated for the genism-LDA was found to be -4280.5691 and that for our LDA algorithm is -2678.1889.
 
-	Enter the evaluation and parameters used for the evaluation...
+Since we know that Perplexity is a measure of how easy a probability distribution is to predict, from the above we can establish that the genism model is much easier to predict than the one we constructed (as it has a lower perplexity value).
 
-\section{Results} 
+The reason for this is because we convert our corpus to bagofwords in the model constructed using genism. Having a bag of words gives us accurate results and hence a lower perplexity.
+	
+\twocolumn[
+
+\begin{figure}[ht]
+	\vskip 0.2in
+		\begin{center}
+			\centerline{\includegraphics[width=\columnwidth]{lda}}
+			\caption{Obtained evaluations and their comparison}
+			\label{yelp}
+		\end{center}
+	\vskip -0.2in
+\end{figure} 
+
+
+	\vskip 0.3in]
+	
+\section{Results and Observations} 
 	\label{result} 
+	
+	After recognizing the topics from the LDA model, we were left with words that are relevant to what would help derive a rating from a review. Each word was found to have a certain probability of being present in each topic. Next, we found the probabilities of a review belonging to a topic. The topic with the highest probability was assigned to the review. We also found the list of words that have the highest chance of being in a topic i.e. the top words in each topic.
+	
+From a readymade database of weights assigned to most common words occurring in the dataset (that help decide the sentiment behind the review), we calculated the weighted probability of each word occurring in a topic finally obtained a score for a review based on its probability of being associated with a particular topic. This score helped us assign a rating to the review as per a fixed set of ranges for the score. We then compared this derived rating to the rating provided by a reviewer. It was found that 65$\%$ of the ratings obtained from the reviews matched the ratings given by the user. This doesn?t necessarily mean that we were right and the reviewers were giving inconsistent reviews for ratings. It could simply mean, we weren?t finding the best range for classifying reviews. Interestingly, the very low and very high ratings given by users were consistent with their reviews and more often than not, the ratings we found matched the ratings given by the user. However, when a user gave a more average rating, we often perceived their review to not match with the rating our algorithm calculated.
 
-\begin{figure}[ht]
-	\centerline{\includegraphics[width=\columnwidth]{preproctext}}
-	\caption{Pre-Processed text that will be used for the implementation}
-	\label{preproctext}
-	\vskip 0.15in
-\end{figure} 
+An observation we made was that using more data increases the accuracy of the result. As we used more reviews, the reviews-to-rating normalization became more efficient. We also noticed that, as we were identifying topic belongingness of words by individual words, context was not recognized. People are less likely to use passive speech during reviews. For example, ?the pizza was horrible? appears more often than ?the pizza was not the best?. Hence, due to the sheer size of the data, the occurrences of passive negative words may not make a huge difference in the larger picture.
 
-\begin{figure}[ht]
-	\centerline{\includegraphics[width=\columnwidth]{tokenized}}
-	\caption{Tokenized text}
-	\label{tokenized}
-	\vskip 0.15in
-\end{figure} 
+The primary challenge that we faced during the project was understanding details of various algorithm and picking the most feasible one that we could implement well and that would help us receive some interesting results. Along the way, we faced a steep learning curve as we didn?t have much experience with these algorithms. 
 
-\begin{figure}[ht]
-	\centerline{\includegraphics[width=\columnwidth]{lda}}
-	\caption{LDA Evaluation result}
-	\label{lda}
-	\vskip 0.15in
-\end{figure} 
- 
 
 \section{Challenges}
 	\label{challenges}
@@ -280,7 +307,7 @@ Since the starting point sampling point of dataset is chosen randomly, thus it m
 \bibitem{zhuang} 
 	Zhuang.L, Jing.F, Zhu.X. 
 	\textit{Movie Review Mining and Summarization.} 
-	CIKM?06, Arlington, VA, USA, 2006.
+	CIKM '06, Arlington, VA, USA, 2006.
 
 \bibitem{hum} 
 	Hu.M, Liu.B

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 NOV 2016 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 DEC 2016 09:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -286,7 +286,10 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (./cmps242report.aux
 
-./cmps242report.aux:42: Package natbib Error: Bibliography not compatible with 
+LaTeX Warning: Label `yelp' multiply defined.
+
+
+./cmps242report.aux:39: Package natbib Error: Bibliography not compatible with 
 author-year citations.
 (natbib)                Press <return> to continue in numerical citation style.
 
@@ -295,7 +298,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 ...mand\NAT@force@numbers{}\NAT@force@numbers
+l.39 ...mand\NAT@force@numbers{}\NAT@force@numbers
                                                   
 ? 
 )
@@ -407,47 +410,64 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
 
-<eCommerce_chart.pdf, id=7, 794.97pt x 614.295pt>
+<eCommerce_chart.pdf, id=6, 794.97pt x 614.295pt>
 File: eCommerce_chart.pdf Graphic file (type pdf)
  <use eCommerce_chart.pdf>
 Package pdftex.def Info: eCommerce_chart.pdf used on input line 70.
 (pdftex.def)             Requested size: 234.8775pt x 181.49664pt.
 
-<yelp_stats.pdf, id=8, 794.97pt x 614.295pt>
+<yelp_stats.pdf, id=7, 794.97pt x 614.295pt>
 File: yelp_stats.pdf Graphic file (type pdf)
  <use yelp_stats.pdf>
 Package pdftex.def Info: yelp_stats.pdf used on input line 80.
 (pdftex.def)             Requested size: 234.8775pt x 181.49664pt.
-
-<Thanksgiving_sales.pdf, id=9, 794.97pt x 614.295pt>
-File: Thanksgiving_sales.pdf Graphic file (type pdf)
-
-<use Thanksgiving_sales.pdf>
-Package pdftex.def Info: Thanksgiving_sales.pdf used on input line 89.
-(pdftex.def)             Requested size: 234.8775pt x 181.49664pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 110.
- [2 <./eCommerce_chart.pdf, page is rotated 90 degrees> <./yelp_stats.pdf, page
- is rotated 90 degrees> <./Thanksgiving_sales.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 100--105
 
-./cmps242report.tex:120: Undefined control sequence.
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 123.
+[2 <./eCommerce_chart.pdf, page is rotated 90 degrees> <./yelp_stats.pdf, page 
+is rotated 90 degrees>]
+./cmps242report.tex:142: Undefined control sequence.
 <argument> ...kip 0.3 in \par $$ p( z_i = j \text 
                                                   { }| \text { } z_{-i}, w_i...
-l.120 ]
+l.142 ]
        
 ? 
-./cmps242report.tex:120: Undefined control sequence.
+./cmps242report.tex:142: Undefined control sequence.
 <argument> ...\par $$ p( z_i = j \text { }| \text 
                                                   { } z_{-i}, w_i, d_i ) = \...
-l.120 ]
+l.142 ]
+       
+? 
+./cmps242report.tex:142: Missing $ inserted.
+<inserted text> 
+                $
+l.142 ]
+       
+? 
+./cmps242report.tex:142: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.142 ]
+       
+? 
+./cmps242report.tex:142: Missing $ inserted.
+<inserted text> 
+                $
+l.142 ]
+       
+? 
+./cmps242report.tex:142: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.142 ]
        
 ? 
 
@@ -456,68 +476,131 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [3
 
 ]
-<preproctext.png, id=80, 454.69875pt x 238.8925pt>
-File: preproctext.png Graphic file (type png)
- <use preproctext.png>
-Package pdftex.def Info: preproctext.png used on input line 189.
-(pdftex.def)             Requested size: 234.8775pt x 123.40099pt.
+[4
 
-<tokenized.png, id=82, 542.025pt x 336.25626pt>
-File: tokenized.png Graphic file (type png)
- <use tokenized.png>
-Package pdftex.def Info: tokenized.png used on input line 196.
-(pdftex.def)             Requested size: 234.8775pt x 145.71103pt.
-
-<lda.png, id=83, 684.5575pt x 347.2975pt>
+]
+./cmps242report.tex:212: Argument of \@float@Hx has an extra }.
+<inserted text> 
+                \par 
+l.212 \begin{figure}[ht]
+                        
+? 
+Runaway argument?
+ht\vskip -\dbltextfloatsep 
+./cmps242report.tex:212: Paragraph ended before \@float@Hx was complete.
+<to be read again> 
+                   \par 
+l.212 \begin{figure}[ht]
+                        
+? 
+./cmps242report.tex:212: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.212 \begin{figure}[ht]
+                        
+? 
+<lda.png, id=71, 684.5575pt x 74.2775pt>
 File: lda.png Graphic file (type png)
  <use lda.png>
-Package pdftex.def Info: lda.png used on input line 203.
-(pdftex.def)             Requested size: 234.8775pt x 119.16064pt.
+Package pdftex.def Info: lda.png used on input line 215.
+(pdftex.def)             Requested size: 234.8775pt x 25.48521pt.
 
-./cmps242report.tex:255: Misplaced alignment tab character &.
-l.255 	JMLR : W&
+
+./cmps242report.tex:216: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.216 			\caption
+                 {Obtained evaluations and their comparison}
+? 
+./cmps242report.tex:220: Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.220 \end{figure}
+                  
+? 
+
+./cmps242report.tex:220: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 \end{figure}
+                  
+? 
+./cmps242report.tex:220: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.220 \end{figure}
+                  
+? 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+./cmps242report.tex:282: Misplaced alignment tab character &.
+l.282 	JMLR : W&
                 CP volume 28. Copyright 2013 by the author
 ? 
-[4 <./preproctext.png> <./tokenized.png> <./lda.png>]
-./cmps242report.tex:264: Misplaced alignment tab character &.
-l.264 ...D. M., Griffiths, T. L., Jordan, M. I., &
+
+Overfull \vbox (41.65013pt too high) has occurred while \output is active []
+
+
+[5
+
+ <./lda.png>]
+./cmps242report.tex:291: Misplaced alignment tab character &.
+l.291 ...D. M., Griffiths, T. L., Jordan, M. I., &
                                                    Tenenbaum, J. B.
 ? 
 
-./cmps242report.tex:295: LaTeX Error: \begin{thebibliography} on input line 243
+Underfull \hbox (badness 1701) in paragraph at lines 308--311
+\T1/ptm/m/it/10 Sum-ma-riza-tion. \T1/ptm/m/n/10 CIKM '06, Ar-ling-ton, VA, USA
+,
+ []
+
+
+./cmps242report.tex:322: LaTeX Error: \begin{thebibliography} on input line 270
  ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.295 \end{document}
+l.322 \end{document}
                     
 ? 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
-[5
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 322.
+[6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
  (./cmps242report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
 Package rerunfilecheck Info: File `cmps242report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 243 (\begingroup)
+### semi simple group (level 1) entered at line 270 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6544 strings out of 493014
- 93628 string characters out of 6133351
- 184525 words of memory out of 5000000
- 9964 multiletter control sequences out of 15000+600000
+ 6522 strings out of 493014
+ 93252 string characters out of 6133351
+ 185317 words of memory out of 5000000
+ 9948 multiletter control sequences out of 15000+600000
  41840 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,11n,45p,882b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,12n,45p,1134b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -534,10 +617,10 @@ ve/2016/texmf-dist/fonts/type1/urw/courier/ucrbo8a.pfb></usr/local/texlive/2016
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on cmps242report.pdf (5 pages, 699656 bytes).
+Output written on cmps242report.pdf (6 pages, 433005 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
