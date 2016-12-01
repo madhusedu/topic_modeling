@@ -73,7 +73,7 @@ def function(phi1,n):
 
 
 
-k1 = 5 # number of topics
+k1 = 3 # number of topics
 alpha = 1 # hyperparameter. single value indicates symmetric dirichlet prior. higher=>scatters document clusters
 eta = 0.001 # hyperparameter
 iterations = 3 # iterations for collapsed gibbs sampling.  This should be a lot higher than 3 in practice.
@@ -286,8 +286,9 @@ for i in range(0, len(phi)):
                 if docs[j] == wordAFINN[k]:
                     phi[i][j] = phi[i][j] * weightAFINN[k]
 
-sums = [k1]
+sums = []
 temp_sum=0
+
 for i in range(0, len(phi)):
     for j in range(0, len(phi[i])):
         temp_sum = temp_sum + phi[i][j]
@@ -298,13 +299,19 @@ print "SUMS"
 print sums
 print ""
 
-final_score = [k1]
+final_score = [] #because number of reviews = 6
 temp_sum = 0
+pos = 0
+max_num = -numpy.inf
+
 for i in range(0, len(theta)):
     for j in range(0, len(theta[i])):
-        temp_sum = temp_sum + (theta[i][j] * sums[j])
+        if max_num < theta[i][j]:
+            max_num = theta[i][j]
+            pos = j
+    temp_sum = max_num* sums[pos]
     final_score.append(temp_sum)
-    temp_sum = 0
+    max_num = -numpy.inf
 
 print "Final Score"
 print final_score
