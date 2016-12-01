@@ -75,7 +75,7 @@ n=3 #Top n words belonging to a topic
 column_names = ['a', 'b', 'c', 'd', 'e','f','g','h','i','j']
 
 #reading the data using the pandas library
-fileread = pandas.read_csv('/data/review_data.csv', names=column_names)
+fileread = pandas.read_csv('/data/training_data.csv', names=column_names)
 
 reviews = fileread.c.tolist()
 review =  [i.decode('UTF-8') if isinstance(i, basestring) else i for i in reviews]
