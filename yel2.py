@@ -121,7 +121,7 @@ for i in review:
     #print texts
 
 newlist=[[]]
-df = pandas.read_csv('/Users/FaisalAmeen/Downloads/AFINN/AFINN.csv', names=['word', 'score'])
+df = pandas.read_csv('/Users/bharathnagesh/Documents/topic_modeling/AFINN.csv', names=['word', 'score'])
 arr = numpy.array(df)
 wordAFINN = list(arr[:,0])
 #print x
