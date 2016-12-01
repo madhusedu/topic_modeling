@@ -1,13 +1,10 @@
 from nltk.tokenize import RegexpTokenizer
 from stop_words import get_stop_words
 from nltk.stem.porter import PorterStemmer
-#from gensim import corpora, models
-#import gensim
 import pandas
 import random
 from itertools import chain
 import numpy
-#from nltk.stem.snowball import SnowballStemmer
 
 def denom_a_func(d):
     denom_a_sum1= 0
@@ -83,7 +80,7 @@ n=4 #Top n words belonging to a topic
 column_names = ['a', 'b', 'c', 'd', 'e','f','g','h','i','j']
 
 #reading the data using the pandas library
-fileread = pandas.read_csv('review_data.csv', names=column_names)
+fileread = pandas.read_csv('training_data.csv', names=column_names)
 
 
 reviews = fileread.c.tolist()
