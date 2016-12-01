@@ -178,9 +178,12 @@ Since the starting point sampling point of dataset is chosen randomly, thus it m
 \section{Feature Engineering} 
 	\label{engineer} 
 
-	In order to perform the function of topic modeling we needed a dataset, for this we used the Yelp user review's dataset which was provided along with the other datasets in the Yelp dataset. The dataset was found to be very large in order to process and obtain results quickly. Due to this time constraint ,we had to be sub-sample the dataset and form a secondary dataset with about 500 reviews. This ensured that our results was obtained efficiently on a large enough dataset required to generalize our algorithm.
+In order to perform the function of topic modeling we needed a dataset, for this we used the Yelp user review?s dataset which was provided along with the other datasets in the Yelp dataset. The dataset was found to be very large in order to process and obtain results quickly. Due to hardware limitations and high processing power required to run a huge sample of data we started running the code with variable sample size. We started with 500 reviews and then increased the sample size to 1000 reviews. Consequently we started running the code with increasing sample sizes and found that after 20,000 reviews the processing time taken is high and the results does not vary much with the sample size above this limit. We performed our final Computation on 50000 reviews. The output result we have uploaded and shared in github was for this sample size. We also tried to perform this computation for a dataset with more samples but the processing power required to perform this was high and due to our hardware limitations our systems were not able to perform this computations. Therefore we had make this our upper limit of sample size. This is the data we used to train our model . we have also tested the model using a sample size of 5000 reviews and we observed that the result of training data and test data were comparable. This en-sured that our results was obtained efficiently on a large enough dataset required to generalize our algorithm.
+
+Are features adequate and reasonable? What pre processing did you do?
 	
-	The primary feature that was required to perform the desired task was review text. Not much else was needed apart from this. Using. the review text we created other parameters which we then used to create a topic model. Some of these were 
+	The primary feature that was required to perform the de-sired task was review text and ratings . using the reviews we found the probalbity of a review belonging to a topic which is important in many contexts and then by finding the weighted sum of probabilities we were able to  give an appropriate ratings for the review and we  complared the rating with the rating given by the user and there   was a 65\%  match between our result and th e ratings given by the user. This shows that there are a good percentage of rating which match  the reviews. We thought  that ratings and reviews were a great features     as they are the major features that will be used by the users and by finding a correlation. 
+
 	
 	\begin{itemize}
 		\item{Word-topic matrix}
@@ -188,13 +191,9 @@ Since the starting point sampling point of dataset is chosen randomly, thus it m
 		\item{The various probabilities of occurrences}
 	\end{itemize} 
 
-	However we could not use the review text as given within the dataset. We had to process the data so that the necessary functions could be applied to it in order to obtain the results. 
-	
-	In order to obtain and process the data we first had to convert the JSON file into a useable CSV file. Once this was done we sub-sampled the dataset into something that was smaller and would give us a flavor of what we could expect from a larger dataset. 
-	
-	Once the sub-sampling was complete we created a list of all the words within each review and then removed stop words i.e. words such as "a", "the" and so on... This helped us in forming a list with all the relevant and necessary words which could then be applied in our topic modeling algorithm. 
-	
-	After removing the stop words we went ahead and labelled the sentences i.e. we implemented topic modeling using the 	LDA algorithm and then classified each subtopic into groups such as Price, Time of the day, Service, etc...
+	However we could not use the review text as given within the dataset. We had to process the data so that the neces-sary functions could be applied to it in order to obtain the results.
+
+In order to obtain and process the data we first had to con-vert the JSON file into a useable CSV file. Once this was done we sub-sampled the dataset and incremented the sample size. We made a list of reviews which is converted to list of words. We then pass this list of words through stop words library which will remove the unimportant words from the list of words in the review. After passing it through stop words we then pass to stemming library which converts all the words into their root words which will be used to compare words and count similar words as one word. We then tokenize the list of stemmed words for further processing. The tokenized words are then compared against affin list which consists of all the positive and negative words with their respective sentiment score
 	  
 	 We created specific methods within our code to implement the tasks which are explained in sections ~\ref{eval} and ~\ref{result}. 
 	
@@ -206,21 +205,8 @@ Since the starting point sampling point of dataset is chosen randomly, thus it m
 Since we know that Perplexity is a measure of how easy a probability distribution is to predict, from the above we can establish that the genism model is much easier to predict than the one we constructed (as it has a lower perplexity value).
 
 The reason for this is because we convert our corpus to bagofwords in the model constructed using genism. Having a bag of words gives us accurate results and hence a lower perplexity.
-	
-\twocolumn[
 
-\begin{figure}[ht]
-	\vskip 0.2in
-		\begin{center}
-			\centerline{\includegraphics[width=\columnwidth]{lda}}
-			\caption{Obtained evaluations and their comparison}
-			\label{yelp}
-		\end{center}
-	\vskip -0.2in
-\end{figure} 
-
-
-	\vskip 0.3in]
+The results have been included within the lda.pdf file in the report folder of the repository.
 	
 \section{Results and Observations} 
 	\label{result} 
@@ -232,6 +218,14 @@ From a readymade database of weights assigned to most common words occurring in 
 An observation we made was that using more data increases the accuracy of the result. As we used more reviews, the reviews-to-rating normalization became more efficient. We also noticed that, as we were identifying topic belongingness of words by individual words, context was not recognized. People are less likely to use passive speech during reviews. For example, ?the pizza was horrible? appears more often than ?the pizza was not the best?. Hence, due to the sheer size of the data, the occurrences of passive negative words may not make a huge difference in the larger picture.
 
 The primary challenge that we faced during the project was understanding details of various algorithm and picking the most feasible one that we could implement well and that would help us receive some interesting results. Along the way, we faced a steep learning curve as we didn?t have much experience with these algorithms. 
+
+We obtained top words in each topic as follows :
+
+Top 5 words in \textbf{topic 0} are ['fresh', 'like', 'popular', 'free', 'disgusting'] \\
+Top 5 words in \textbf{topic 1} are ['better', 'win', 'saved', 'worst', 'disappointed'] \\
+Top 5 words in \textbf{topic 2} are ['trouble', 'pay', 'great', 'support', 'miss'] \\ 
+Top 5 words in \textbf{topic 3} are ['good', 'bad', 'pleasant', 'worthy', 'mistaken'] \\ 
+Top 5 words in \textbf{topic 4} are ['best', 'awards', 'failure', 'sadly', 'awesome'] \\
 
 
 \section{Challenges}
